@@ -17,7 +17,7 @@ Adresse IP : Pas d'adresse ip parce que je ne suis pas connecté par cable ethern
 Adresse ip de la passerelle : Passerelle par défaut. . . . . . . . . : 10.33.3.253
 
 **En graphique (GUI : Graphical User Interface)**
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![GUI_1](img/GUI_1.png)
 
 A quoi sert le gateway d'Ynov : Le gateway permet de relier le réseau Ynov au réseau Internet.
 
@@ -26,7 +26,8 @@ A quoi sert le gateway d'Ynov : Le gateway permet de relier le réseau Ynov au ré
 
 Changement de l'adresse ip via l'intarface
 
-IMG 2 DE TES MORTS
+
+![GUI_2](img/GUI_2.png)
 
 Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà utilisée donc il y a conflit.
 
