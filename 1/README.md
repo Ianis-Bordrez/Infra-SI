@@ -36,3 +36,39 @@ Le rÃ©seau ne fonctionne plus parce que nous utilisons une adresse IP dÃ©jÃ  uti
 ![NMAP](img/NMAP.png)
 
 ### C. Modification d'adresse IP (part 2)
+
+
+# II. Exploration locale en duo
+
+**Parametre carte ethernet :**
+
+![ProprietesIPLocal](img/ProprietesIPLocal.png)
+
+**Test de la connexion :**
+
+![PingReseauA2](img/PingReseauA2.png)
+
+## 4. Utilisation d'un des deux comme gateway
+
+**sur le PC qui n'a plus internet**
+
+![curlgoogle.png](img/curlgoogle.jpg)
+
+**sur le PC qui a toujours internet**
+
+![Ip_Ethernet.png](img/Ip_Ethernet.png)
+
+## 5. Petit chat privé
+
+![Petit_chat.png](img/petit_chat.png)
+
+## 6. Wireshark
+
+## 7. Firewall
+
+
+# III. Manipulations d'autres outils/protocoles côté client
+
+## 1. DHCP
+
+## 2. DNS
