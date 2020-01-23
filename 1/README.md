@@ -1,34 +1,38 @@
 # I. Exploration locale en solo
 ## 1. Affichage d'informations sur la pile TCP/IP locale
 
-Commande utilisÈe pour trouver les infos suivante : ipconfig /all
+Commande utilis√©e pour trouver les infos suivante : ipconfig /all
 
 **Wifi**
-Nom : Carte rÈseau sans fil Wi-Fi
+Nom : Carte r√©seau sans fil Wi-Fi
 Adresse MAC : Adresse physique . . . . . . . . . . . : D8-F2-CA-3B-76-EE
-Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(prÈfÈrÈ)
+Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(pr√©f√©r√©)
 
 **Ethernet**
 Nom : Carte Ethernet Ethernet
 Adresse MAC : Adresse physique . . . . . . . . . . . : 00-D8-61-08-6E-F0
-Adresse IP : Pas d'adresse ip parce que je ne suis pas connectÈ par cable ethernet 
+Adresse IP : Pas d'adresse ip parce que je ne suis pas connect√© par cable ethernet 
 
 **Gateway**
-Adresse ip de la passerelle : Passerelle par dÈfaut. . . . . . . . . : 10.33.3.253
+Adresse ip de la passerelle : Passerelle par d√©faut. . . . . . . . . : 10.33.3.253
 
 **En graphique (GUI : Graphical User Interface)**
+
 ![GUI_1](img/GUI_1.png)
 
-A quoi sert le gateway d'Ynov : Le gateway permet de relier le rÈseau Ynov au rÈseau Internet.
+A quoi sert le gateway d'Ynov : Le gateway permet de relier le r√©seau Ynov au r√©seau Internet.
 
 ## 2. Modifications des informations
 ### A. Modification d'adresse IP (part 1)
 
 Changement de l'adresse ip via l'intarface
 
-
 ![GUI_2](img/GUI_2.png)
 
-Le rÈseau ne fonctionne plus parce que nous utilisons une adresse IP dÈj‡ utilisÈe donc il y a conflit.
+Le r√©seau ne fonctionne plus parce que nous utilisons une adresse IP d√©j√† utilis√©e donc il y a conflit.
 
 ### B. nmap
+
+![NMAP](img/NMAP.png)
+
+### C. Modification d'adresse IP (part 2)
