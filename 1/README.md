@@ -6,7 +6,7 @@ Commande utilisée pour trouver les infos suivante : ipconfig /all
 **Wifi**
 Nom : Carte réseau sans fil Wi-Fi
 Adresse MAC : Adresse physique . . . . . . . . . . . : D8-F2-CA-3B-76-EE
-Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(préféré)
+Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(prÃ©fÃ©rÃ©)
 
 **Ethernet**
 Nom : Carte Ethernet Ethernet
@@ -14,7 +14,7 @@ Adresse MAC : Adresse physique . . . . . . . . . . . : 00-D8-61-08-6E-F0
 Adresse IP : Pas d'adresse ip parce que je ne suis pas connecté par cable ethernet 
 
 **Gateway**
-Adresse ip de la passerelle : Passerelle par défaut. . . . . . . . . : 10.33.3.253
+Adresse ip de la passerelle : Passerelle par dÃ©faut. . . . . . . . . : 10.33.3.253
 
 **En graphique (GUI : Graphical User Interface)**
 
@@ -29,7 +29,7 @@ Changement de l'adresse ip via l'intarface
 
 ![GUI_2](img/GUI_2.png)
 
-Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà utilisée donc il y a conflit.
+Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà  utilisée donc il y a conflit.
 
 ### B. nmap
 
@@ -58,7 +58,7 @@ Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà uti
 
 ![Ip_Ethernet.png](img/Ip_Ethernet.png)
 
-## 5. Petit chat priv�
+## 5. Petit chat privé
 
 ![Petit_chat.png](img/petit_chat.png)
 
@@ -67,7 +67,7 @@ Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà uti
 ## 7. Firewall
 
 
-# III. Manipulations d'autres outils/protocoles c�t� client
+# III. Manipulations d'autres outils/protocoles côté client
 
 ## 1. DHCP
 
