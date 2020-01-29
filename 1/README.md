@@ -1,4 +1,5 @@
 # I. Exploration locale en solo
+
 ## 1. Affichage d'informations sur la pile TCP/IP locale
 
 Commande utilisée pour trouver les infos suivante : ipconfig /all
@@ -6,7 +7,7 @@ Commande utilisée pour trouver les infos suivante : ipconfig /all
 **Wifi**
 Nom : Carte réseau sans fil Wi-Fi
 Adresse MAC : Adresse physique . . . . . . . . . . . : D8-F2-CA-3B-76-EE
-Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(prÃ©fÃ©rÃ©)
+Adresse IP : Adresse IPv4. . . . . . . . . . . . . .: 10.33.1.166(préféré)
 
 **Ethernet**
 Nom : Carte Ethernet Ethernet
@@ -23,6 +24,7 @@ Adresse ip de la passerelle : Passerelle par dÃ©faut. . . . . . . . . : 10.33.
 A quoi sert le gateway d'Ynov : Le gateway permet de relier le réseau Ynov au réseau Internet.
 
 ## 2. Modifications des informations
+
 ### A. Modification d'adresse IP (part 1)
 
 Changement de l'adresse ip via l'intarface
@@ -36,7 +38,6 @@ Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà  u
 ![NMAP](img/NMAP.png)
 
 ### C. Modification d'adresse IP (part 2)
-
 
 # II. Exploration locale en duo
 
@@ -52,23 +53,44 @@ Le réseau ne fonctionne plus parce que nous utilisons une adresse IP déjà  u
 
 **sur le PC qui n'a plus internet**
 
-![curlgoogle.png](img/curlgoogle.jpg)
+![curlgoogle](img/curlgoogle.jpg)
 
 **sur le PC qui a toujours internet**
 
-![Ip_Ethernet.png](img/Ip_Ethernet.png)
+![Ip_Ethernet](img/Ip_Ethernet.png)
 
 ## 5. Petit chat privé
 
-![Petit_chat.png](img/petit_chat.png)
+![Petit_chat](img/petit_chat.png)
 
 ## 6. Wireshark
 
+![wireshark](img/wireshark.png)
+
 ## 7. Firewall
 
+![Firewall](img/firewall.png)
 
 # III. Manipulations d'autres outils/protocoles côté client
 
 ## 1. DHCP
 
+DHCP : Serveur DHCP . . . . . . . . . . . . . : 10.33.3.254
+
+Bail début : Bail obtenu. . . . . . . . . . . . . . : mercredi 29 janvier 2020 08:39:28
+Bail fin :  Bail expirant. . . . . . . . . . . . . : mercredi 29 janvier 2020 10:44:00
+
+Renouveler adresse ip :
+
+![renew](img/renew.png)
+
 ## 2. DNS
+
+![Dns](img/dns1.png)
+
+**nslookup**
+![nslookup](img/nslookup.png)
+
+**reverselookup**
+
+![reverslookup](img/reverselookup.png)
