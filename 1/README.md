@@ -89,7 +89,7 @@ Renouveler adresse ip :
 ![Dns](img/dns1.png)
 
 **nslookup**
-![nslookup](img/nslookup.png)
+![nslookup](img/nsloookup.png)
 
 **reverselookup**
 
