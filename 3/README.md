@@ -96,7 +96,10 @@ PING server1 (10.3.2.11) 56(84) bytes of data.
 ## 1. Configuration du routage sur router
 
 *router:*
+temporaire :
 `sudo sysctl -w net.ipv4.conf.all.forwarding=1`
+permanent :
+`echo 'net.ipv4.ip_forward = 1' >> /etc/sysctl.conf`
 
 ### 2. Ajouter les routes statiques
 
@@ -121,12 +124,91 @@ PING client1 (10.3.1.11) 56(84) bytes of data.
 
 ### 3. Comprendre le routage
 
+*router net1 :*
+`tcpdump -i enp0s8 -w capture1.pcap`
+*router net2 :*
+`tcpdump -i enp0s9 -w capture2.pcap`
+
+*client :*
+`ping server1`
+
+On récupère les fichiers sur notre pc :
+`scp -P 7777 root@10.3.1.11:/root/capture1.pcap  ./`
+`scp -P 7777 root@10.3.1.11:/root/capture2.pcap  ./`
+
+
 |             | MAC src       | MAC dst       | IP src       | IP dst       |
 | ----------- | ------------- | ------------- | ------------ | ------------ |
-| Dans net1 (trame qui entre dans router) | <mac_address> | <mac_address> | <ip_address> | <ip_address> |
-| Dans net2 (trame qui sort de router) | <mac_address> | <mac_address> | <ip_address> | <ip_address> |
+| Dans net1 (trame qui entre dans router) | 08:00:27:b9:25:08 | 08:00:27:aa:bc:cd | 10.3.1.11 | 10.3.2.11 |
+| Dans net2 (trame qui sort de router) | 08:00:27:ae:ad:60 | 08:00:27:a9:e5:f5 | 10.3.1.11 | 10.3.2.11 |
+
+## II. ARP
+
+### 1. Tables ARP
+
+*Voir sa table arp*:
+```bash
+[root@client1 ~]# ip neigh show
+10.3.1.254 dev enp0s8 lladdr 08:00:27:b9:25:08 STALE
+10.3.1.1 dev enp0s8 lladdr 0a:00:27:00:00:03 DELAY
+```
+
+### 2. Requêtes ARP
+
+#### A. Table ARP 1
+
+*Vider la table arp :* `sudo ip neigh flush all`
+*Affichage de la table arp :*
+
+```bash
+[root@client1 ~]# ip neigh show
+10.3.1.254 dev enp0s8 lladdr 08:00:27:b9:25:08 REACHABLE
+10.3.1.1 dev enp0s8 lladdr 0a:00:27:00:00:03 REACHABLE
+```
+
+Le client a ajouté à sa table arp l'ip du router parce qu'il en avait besoin pour envoyer un paquet au server.
+
+#### B. Table ARP 2
+
+*Affichage de la table arp :*
+
+```bash
+[root@client1 ~]# ip neigh show
+10.3.1.254 dev enp0s8 lladdr 08:00:27:b9:25:08 REACHABLE
+10.3.1.1 dev enp0s8 lladdr 0a:00:27:00:00:03 REACHABLE
+```
+
+#### C. tcpdump 1
+
+```bash
+[root@client1 ~]# ip neigh show
+10.3.1.254 dev enp0s8 lladdr 08:00:27:b9:25:08 REACHABLE
+10.3.1.1 dev enp0s8 lladdr 0a:00:27:00:00:03 REACHABLE
+```
+
+#### D. tcpdump 2
+
+```bash
+[root@client1 ~]# ip neigh show
+10.3.1.254 dev enp0s8 lladdr 08:00:27:b9:25:08 REACHABLE
+10.3.1.1 dev enp0s8 lladdr 0a:00:27:00:00:03 REACHABLE
+```
+
+I'm not okay because this is the same thing ><
+I don't know why :c
 
 
+## Entracte : Donner un accès internet aux VMs
+
+ **Permettre un accès WAN (Internet) à client1 :**
+
+*Activation de la carte NAT :* ```ifup enp0s3```
+*Activation de la NAT :*
+```firewall-cmd --add-masquerade --permanent```
+```firewall-cmd --reload```
+
+*Ajout d'une route par défaut :*
+Dans client1 ajouter à routes-enp0s8 : GATEWAY=10.3.1.254
 
 
 ## IV. Bonus
