@@ -154,8 +154,4 @@ guest3> ping 10.4.1.11
 84 bytes from 10.4.1.11 icmp_seq=2 ttl=63 time=10.731 ms
 ```
 
-```bash
-
-```
-
 
